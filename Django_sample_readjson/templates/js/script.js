@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-
+    
     //every time the page loads call the api
     callApi($('#drop option:selected').val());
 
@@ -9,18 +9,15 @@ $(document).ready(function () {
         var period = this.value;
         callApi(period);
     });
-    
 
     //the function to call the api
     function callApi(period){
-        console.log("calling api...")
         $('#tbody').empty();
         $.ajax({ 
             type: 'GET', 
             dataType: 'json',
             url: 'http://127.0.0.1:8000/getjson/?time=' + period, 
             success: function (data) {
-                console.log(data);
                 for(var i=0;i<data.length;i++)
                 {
                   //set sortOrder and bgc for different ratings.
@@ -63,7 +60,9 @@ $(document).ready(function () {
                             +"</td></tr>";
                   $('#tbody').append(Html);
                 }
-                setInterval(checkUpdate(period,data),100); 
+                setInterval(function(){
+                    checkUpdate(period,data);
+                },1000); 
             },
             error: function (msg) {
                 alert(msg,"fail to load the data!");
@@ -71,14 +70,14 @@ $(document).ready(function () {
         })
     }
 
+    //check if the record in the json file has changed or not, if changed there will be alert to let the user know.
     function  checkUpdate(period,data){
-        console.log("checking...");
         $.ajax({
             type: 'GET', 
             dataType: 'json',
             url: 'http://127.0.0.1:8000/getjson/?time=' + period, 
             success: function (res) {
-                if(res != data){
+                if(JSON.stringify(res) != JSON.stringify(data)){
                     alert("New Record Or Record Change Detected, please reload the page!");
                 }
             },
@@ -87,7 +86,6 @@ $(document).ready(function () {
             }
         })
     }
-
 
 })
 

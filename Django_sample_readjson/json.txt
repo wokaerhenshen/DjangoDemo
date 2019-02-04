@@ -75,6 +75,33 @@
 "action": "files-Deleted",
 "submit-type": "FG300B3910602113/root",
 "rating": "medium-Risk"
+},
+{
+"date": "Feb 2, 2019 15:12:59",
+"filename": "helperThree.exe",
+"action": "files-Deleted",
+"submit-type": "FG300B3910602113/root",
+"rating": "medium-Risk"
+},
+{
+"date": "Feb 2, 2019 15:12:59",
+"filename": "helperThree.exe",
+"action": "files-Deleted",
+"submit-type": "FG300B3910602113/root",
+"rating": "medium-Risk"
+},
+{
+"date": "Feb 2, 2019 15:12:59",
+"filename": "helperThree.exe",
+"action": "files-Deleted",
+"submit-type": "FG300B3910602113/root",
+"rating": "clean"
+},
+{
+"date": "Feb 2, 2019 15:12:59",
+"filename": "helperThree.exe",
+"action": "files-Deleted",
+"submit-type": "FG300B3910602113/root",
+"rating": "clean"
 }
-
 ]

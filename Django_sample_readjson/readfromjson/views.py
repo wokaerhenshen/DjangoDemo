@@ -15,7 +15,7 @@ class ReadFromJson(View):
         if time == "" :
             return HttpResponse("please input time and refresh the page")
         else:
-            f = open(r"C:\Users\Karl\Desktop\Django_sample_readjson-20190203T211536Z-001\Django_sample_readjson\json.txt")
+            f = open(r"D:\DjangoDemo\DjangoDemo\Django_sample_readjson\json.txt")
             json_data = "".join(f.readlines()).replace("\n","")
             json_data = json.loads(json_data)
             data = []
