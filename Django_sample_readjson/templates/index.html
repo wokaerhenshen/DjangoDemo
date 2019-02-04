@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Python sample</title>
+</head>
+<body>
+    <h1>Sample Django Project</h1>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="js/script.js"></script>
+    <script src="js/sorttable.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <div class="row">
+        <div class="col-md-12">
+          <p>Please Select Time Period:</p>
+          <select id="drop">
+                <option value="day" selected="selected">24-hours</option>
+                <option value="week">7 days</option>
+                <option value="month">4 weeks</option>
+          </select>
+          <br><br>
+          <table border="1" class="sortable">
+            <thead>
+              <th>date</th>
+              <th>filename</th>
+              <th>action</th>
+              <th>submit-type</th>
+              <th>rating</th>
+            </thead>
+            <tbody id="tbody">
+    
+            </tbody>
+          </table>
+        </div>
+      </div>    
+</body>
+</html>
